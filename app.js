@@ -9,7 +9,7 @@ dotenv.config()
 const app=express()
 const port=process.env.port || 8000; //auto assign port or Runn 8000
 
-const url="mongodb+srv://Sivasankar:VMni1WboHxFehCmk@cluster0.fxyydc8.mongodb.net/?retryWrites=true&w=majority";
+const url=process.env.DB
 const client=new MongoClient(url);
 
  await client.connect();
